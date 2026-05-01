@@ -1,0 +1,598 @@
+fileFormatVersion: 2
+guid: c6e6692dcb72587438950308850cbcc5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7815513454017043908
+    second: baygai-removebg-preview 1_0
+  - first:
+      213: -1444955369004440594
+    second: baygai-removebg-preview 1_1
+  - first:
+      213: 5497784506201723711
+    second: baygai-removebg-preview 1_2
+  - first:
+      213: -6568912660823194708
+    second: baygai-removebg-preview 1_3
+  - first:
+      213: 5186970532064638884
+    second: baygai-removebg-preview 1_4
+  - first:
+      213: -2342545030035779589
+    second: baygai-removebg-preview 1_5
+  - first:
+      213: 5668175796940439499
+    second: baygai-removebg-preview 1_6
+  - first:
+      213: -6235170185440024170
+    second: baygai-removebg-preview 1_7
+  - first:
+      213: -8326953509988067974
+    second: baygai-removebg-preview 1_8
+  - first:
+      213: 219614479932730860
+    second: baygai-removebg-preview 1_9
+  - first:
+      213: 6041002582308294456
+    second: baygai-removebg-preview 1_10
+  - first:
+      213: -1435885705839376083
+    second: baygai-removebg-preview 1_11
+  - first:
+      213: -2738437537199357900
+    second: baygai-removebg-preview 1_12
+  - first:
+      213: -979981193810613571
+    second: baygai-removebg-preview 1_13
+  - first:
+      213: -4335445312760658910
+    second: baygai-removebg-preview 1_14
+  - first:
+      213: -6561391255639917173
+    second: baygai-removebg-preview 1_15
+  - first:
+      213: 8312160875438988843
+    second: baygai-removebg-preview 1_16
+  - first:
+      213: -2410115405260193696
+    second: baygai-removebg-preview 1_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 60
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: baygai-removebg-preview 1_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 250
+        width: 112
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3227040ce7b98390800000000000000
+      internalID: -7815513454017043908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baygai-removebg-preview 1_1
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 250
+        width: 122
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee362326fbc72fbe0800000000000000
+      internalID: -1444955369004440594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baygai-removebg-preview 1_2
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 250
+        width: 127
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f33dccf31ed0c4c40800000000000000
+      internalID: 5497784506201723711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baygai-removebg-preview 1_3
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 250
+        width: 121
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca341131db886d4a0800000000000000
+      internalID: -6568912660823194708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baygai-removebg-preview 1_4
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 250
+        width: 108
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a7b1289732dbf740800000000000000
+      internalID: 5186970532064638884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baygai-removebg-preview 1_5
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 139
+        width: 107
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bff4c5ed4bb9d7fd0800000000000000
+      internalID: -2342545030035779589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baygai-removebg-preview 1_6
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 139
+        width: 109
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcff9152bd769ae40800000000000000
+      internalID: 5668175796940439499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baygai-removebg-preview 1_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 139
+        width: 109
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 699adbe60c93879a0800000000000000
+      internalID: -6235170185440024170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baygai-removebg-preview 1_8
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 139
+        width: 109
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7518f796e7b07c80800000000000000
+      internalID: -8326953509988067974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baygai-removebg-preview 1_9
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 139
+        width: 109
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ced2ce7b43a3c0300800000000000000
+      internalID: 219614479932730860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baygai-removebg-preview 1_10
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 139
+        width: 106
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83f04bd87d3f5d350800000000000000
+      internalID: 6041002582308294456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baygai-removebg-preview 1_11
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 66
+        width: 60
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d290265ee85b21ce0800000000000000
+      internalID: -1435885705839376083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baygai-removebg-preview 1_12
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 66
+        width: 57
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43003ab919d1ff9d0800000000000000
+      internalID: -2738437537199357900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baygai-removebg-preview 1_13
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 66
+        width: 57
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbaea50eb486662f0800000000000000
+      internalID: -979981193810613571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baygai-removebg-preview 1_14
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 5
+        width: 54
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 224c4cd457765d3c0800000000000000
+      internalID: -4335445312760658910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baygai-removebg-preview 1_15
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 5
+        width: 54
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8d7a3faa6141f4a0800000000000000
+      internalID: -6561391255639917173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baygai-removebg-preview 1_16
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 5
+        width: 57
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2ed078c64aba5370800000000000000
+      internalID: 8312160875438988843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baygai-removebg-preview 1_17
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 5
+        width: 36
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06005c9eecc8d8ed0800000000000000
+      internalID: -2410115405260193696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 385cc214d6449234381e2835d3803111
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      baygai-removebg-preview 1_0: -7815513454017043908
+      baygai-removebg-preview 1_1: -1444955369004440594
+      baygai-removebg-preview 1_10: 6041002582308294456
+      baygai-removebg-preview 1_11: -1435885705839376083
+      baygai-removebg-preview 1_12: -2738437537199357900
+      baygai-removebg-preview 1_13: -979981193810613571
+      baygai-removebg-preview 1_14: -4335445312760658910
+      baygai-removebg-preview 1_15: -6561391255639917173
+      baygai-removebg-preview 1_16: 8312160875438988843
+      baygai-removebg-preview 1_17: -2410115405260193696
+      baygai-removebg-preview 1_2: 5497784506201723711
+      baygai-removebg-preview 1_3: -6568912660823194708
+      baygai-removebg-preview 1_4: 5186970532064638884
+      baygai-removebg-preview 1_5: -2342545030035779589
+      baygai-removebg-preview 1_6: 5668175796940439499
+      baygai-removebg-preview 1_7: -6235170185440024170
+      baygai-removebg-preview 1_8: -8326953509988067974
+      baygai-removebg-preview 1_9: 219614479932730860
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
