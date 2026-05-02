@@ -1,5 +1,7 @@
+using System.Collections;
 using UnityEditorInternal.VR;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -7,39 +9,52 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     private bool isFacingRight;
 
-    //move
+    [Header ("Simple Move")]
     [SerializeField] private float baseSpeed;
     [SerializeField] private float jumpForce;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private AnimationCurve jumpingGravityCurve;
-
+    public float Speed;
     private float horizontal = 0f;
-    public bool isGrounded;
-    public bool isJumping;
-    public float jumpTimer;
+    private bool isGrounded;
+    private bool isJumping;
+    private float jumpTimer;
 
-    //throwing
+
+    [Header ("Running")]
+    [SerializeField] private AnimationCurve RunningSpeedCurve;
+    [SerializeField] private float MaxStamina;
+    [SerializeField] private float StaminaCost;
+    [SerializeField] private float rechargeRate;
+    public Image StaminaBar;
+    public float stamina;
+    private float speedTimer;
+    private bool isRunning;
+    private Coroutine recharge;
+
+
+    [Header ("Throwing")]
     [SerializeField] private ThrowingProjectile predictor;
     [SerializeField] private GameObject stonePrefab;
     [SerializeField] private Transform throwPoint;
     private bool isthrowing = false;
-    public float currentForce = 0f;
+    private float currentForce = 0f;
     private bool isCharging = false;
-    public float aimAngle;
-    public Vector2 velocity;
+    private float aimAngle;
+    private Vector2 velocity;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         isGrounded = CheckGrounded();
         isFacingRight = transform.right.x > 0;
         horizontal = Input.GetAxisRaw("Horizontal");
+
+        //throwing
         if (Input.GetKey(KeyCode.F))
         {
             isthrowing = !isthrowing;
@@ -84,11 +99,10 @@ public class Player : MonoBehaviour
         }
         if (isGrounded)
         {
+            //jumping
             isJumping = false;
             rb.gravityScale = 5f;
-        }
-        if (isGrounded)
-        {
+
             if (Input.GetKey(KeyCode.Space) && !isJumping)
             {
                 StartJumping();
@@ -97,13 +111,45 @@ public class Player : MonoBehaviour
             {
                 rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
             }
-            if (Mathf.Abs(horizontal) > 0.1f)
+
+            //running
+            if (Input.GetKey(KeyCode.LeftShift))
             {
-                rb.linearVelocity = new Vector2(horizontal * baseSpeed, rb.linearVelocityY);
+                isRunning = true;
+                speedTimer += Time.deltaTime;
+
+                Speed = RunningSpeedCurve.Evaluate(speedTimer);
+                if(speedTimer > 1f)
+                {
+                    Speed = RunningSpeedCurve.Evaluate(1);
+                }
+                stamina -= StaminaCost;
+
+                StaminaBar.fillAmount = stamina / MaxStamina;
+
+                if(stamina < 0f)
+                {
+                    stamina = 0f;
+                }
+
+                rb.linearVelocity = new Vector2(horizontal * Speed, rb.linearVelocityY);
+
+                if(recharge != null)
+                {
+                    StopCoroutine(recharge);
+                }
+                recharge = StartCoroutine(StaminaRecharge());
+            }
+            if (Input.GetKeyUp(KeyCode.LeftShift))
+            {
+                isRunning = false;
+                speedTimer = 0f;
+                Speed = baseSpeed;
             }
         }
 
-        if (Mathf.Abs(horizontal) > 0.1f)
+        //moving
+        if (Mathf.Abs(horizontal) > 0.1f && !isRunning)
         {
             rb.linearVelocity = new Vector2(horizontal * baseSpeed, rb.linearVelocityY);
             transform.rotation = Quaternion.Euler(new Vector3(0, horizontal > 0 ? 0 : 180, 0));
@@ -166,5 +212,20 @@ public class Player : MonoBehaviour
             aimAngle -= 10f * Time.deltaTime;
         }
         aimAngle = Mathf.Clamp(aimAngle, -20f, 90f);
+    }
+
+    private IEnumerator StaminaRecharge()
+    {
+        yield return new WaitForSeconds(1f);
+        while(stamina < MaxStamina)
+        {
+            stamina += rechargeRate;
+            if (stamina > MaxStamina)
+            {
+                stamina = MaxStamina;
+            }
+            StaminaBar.fillAmount = stamina / MaxStamina;
+            yield return new WaitForSeconds(0.1f);
+        }
     }
 }
