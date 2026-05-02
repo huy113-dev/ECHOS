@@ -1,0 +1,6 @@
+-Di chuyen: A/D
+-nhay: space
+-an "F" de vao che do nem, khi o trong che do nay ko di chuyen dc
+-chinh goc nem bang phim mui ten len xuong
+-giu space de gong luc
+- neu an F thay van di chuyen duoc thi an vao scene game roi an lai F
