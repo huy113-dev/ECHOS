@@ -63,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -115,12 +115,12 @@ TextureImporter:
       name: climb ledge_0
       rect:
         serializedVersion: 2
-        x: 307
+        x: 0
         y: 0
-        width: 340
-        height: 731
+        width: 813
+        height: 998
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -137,12 +137,12 @@ TextureImporter:
       name: climb ledge_1
       rect:
         serializedVersion: 2
-        x: 1352
-        y: 65
-        width: 340
-        height: 675
+        x: 1024
+        y: 0
+        width: 813
+        height: 1001
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -159,12 +159,12 @@ TextureImporter:
       name: climb ledge_2
       rect:
         serializedVersion: 2
-        x: 2369
-        y: 229
-        width: 345
-        height: 655
+        x: 2045
+        y: 0
+        width: 813
+        height: 1001
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -181,12 +181,12 @@ TextureImporter:
       name: climb ledge_3
       rect:
         serializedVersion: 2
-        x: 3283
-        y: 591
-        width: 447
-        height: 671
+        x: 3072
+        y: 6
+        width: 813
+        height: 1379
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -203,12 +203,12 @@ TextureImporter:
       name: climb ledge_4
       rect:
         serializedVersion: 2
-        x: 4481
-        y: 711
-        width: 428
-        height: 674
+        x: 4096
+        y: 6
+        width: 813
+        height: 1379
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -225,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: c5730d71c060f55448333f6040273e2f
     internalID: 0
     vertices: []
     indices: 

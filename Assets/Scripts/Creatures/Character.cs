@@ -21,7 +21,7 @@ public class Character : MonoBehaviour
     }
     protected virtual void OnDespawn()
     {
-        //ChangeAnim("die");
+        ChangeAnim("Die");
         Invoke(nameof(Dead), 2f);
 
     }

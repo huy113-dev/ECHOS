@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEditorInternal.VR;
 using UnityEngine;
 using UnityEngine.UI;
@@ -22,6 +23,8 @@ public class Player : Character
     private bool isGrounded;
     private bool isJumping;
     private float jumpTimer;
+    public bool isCrouching;
+    private bool HeadBlocked;
 
 
     [Header("Running")]
@@ -45,7 +48,16 @@ public class Player : Character
     private float aimAngle;
     private Vector2 velocity;
 
+    [Header("Ledge climb")]
+    [SerializeField] private Vector2 offset1;
+    [SerializeField] private Vector2 offset2;
 
+    private Vector2 climbStartPos;
+    private Vector2 climbOverPos;
+
+    private bool canGrabLedge = true;
+    private bool canClimb;
+    public bool ledgeDetected;
     void Start()
     {
         SavePoint();
@@ -63,11 +75,13 @@ public class Player : Character
             return;
         }
         isGrounded = CheckGrounded();
+        HeadBlocked = BlockingHead();
         isFacingRight = transform.right.x > 0;
         horizontal = Input.GetAxisRaw("Horizontal");
+        CheckForLedge();
 
         //moving
-        if (Mathf.Abs(horizontal) > 0.1f && !isRunning)
+        if (Mathf.Abs(horizontal) > 0.1f && !isRunning && !isJumping)
         {
             ChangeAnim("Walk");
             rb.linearVelocity = new Vector2(horizontal * baseSpeed, rb.linearVelocityY);
@@ -114,7 +128,7 @@ public class Player : Character
             isJumping = false;
             rb.gravityScale = 5f;
 
-            if (Input.GetKey(KeyCode.Space) && !isJumping)
+            if (Input.GetKey(KeyCode.Space) && !isJumping && !HeadBlocked)
             {
                 StartJumping();
             }
@@ -122,13 +136,13 @@ public class Player : Character
             {
                 rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
             }
-
+            
             //running
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 isRunning = true;
                 speedTimer += Time.deltaTime;
-                if(stamina > 0f)
+                if(stamina > 0f && !isJumping)
                 {
                     ChangeAnim("Run");
                 }
@@ -162,13 +176,39 @@ public class Player : Character
                 }
                 recharge = StartCoroutine(StaminaRecharge());
             }
-            if (Mathf.Abs(horizontal) < 0.1f && !isJumping)
+            if (Mathf.Abs(horizontal) < 0.1f && !isJumping && !isCrouching)
             {
                 ChangeAnim("Idle");
                 rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
             }
 
+            //crouch
+            if(Input.GetKey(KeyCode.LeftControl) && !isRunning && !isJumping || HeadBlocked)
+            {
+                isCrouching = true;
+                ChangeAnim("Crouch");
+                float CrouchSpeed = baseSpeed / 2;
+                if (Mathf.Abs(horizontal) > 0.1f)
+                {
+                    ChangeAnim("CrouchMove");
+                    rb.linearVelocity = new Vector2(horizontal * CrouchSpeed, rb.linearVelocityY);
+                    transform.rotation = Quaternion.Euler(new Vector3(0, horizontal > 0 ? 0 : 180, 0));
+                }
+
+            }
+            if (Input.GetKeyUp(KeyCode.LeftControl) || !isGrounded || isJumping)
+            {
+                isCrouching = false;
+            }
+
         }
+
+        if (!isGrounded && rb.linearVelocity.y < 0.1f && !canClimb)
+        {
+            isJumping = false;
+            ChangeAnim("Fall");
+        }
+
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             isRunning = false;
@@ -212,7 +252,7 @@ public class Player : Character
         }
         else
         {
-            Vector2 rayStartPosR = transform.position + new Vector3(0f, 0, 0);
+            Vector2 rayStartPosR = transform.position + new Vector3(0, 0, 0);
             Vector2 rayStartPosL = transform.position + new Vector3(-0.6f, 0, 0);
             Debug.DrawLine(rayStartPosL, rayStartPosL + Vector2.down * 1.23f, Color.red);
             Debug.DrawLine(rayStartPosR, rayStartPosR + Vector2.down * 1.23f, Color.red);
@@ -226,6 +266,7 @@ public class Player : Character
     private void StartJumping()
     {
         isJumping = true;
+        ChangeAnim("JumpIn");
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         jumpTimer = 0f;
     }
@@ -238,6 +279,38 @@ public class Player : Character
             rb.gravityScale = jumpingGravityCurve.Evaluate(jumpTimer);
         }
 
+    }
+
+    private void CheckForLedge()
+    {
+        if(ledgeDetected && canGrabLedge)
+        {
+            canGrabLedge = false;
+            Vector2 ledgePosition = GetComponentInChildren<LedgeCheck>().transform.position;
+            climbStartPos = ledgePosition + offset1;
+            climbOverPos = ledgePosition + offset2;
+            canClimb = true;
+        }
+        if (canClimb)
+        {
+            ChangeAnim("ClimbLedge");
+            transform.position = climbStartPos;
+        }
+    }
+
+    private void LedgeClimbOver()
+    {
+        canClimb = false;
+        transform.position = climbOverPos;
+        canGrabLedge = true;
+    }
+
+    private bool BlockingHead()
+    {
+        Vector2 rayStartPos = transform.position + new Vector3(0.15f, 0, 0);
+        Debug.DrawLine(rayStartPos, rayStartPos + Vector2.up * 1f, Color.green);
+        RaycastHit2D hit = Physics2D.Raycast(rayStartPos, Vector2.up, 1f, groundLayer);
+        return hit.collider != null;
     }
 
     private Vector2 CalculateForce(float force)
