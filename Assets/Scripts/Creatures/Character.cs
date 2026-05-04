@@ -17,7 +17,7 @@ public class Character : MonoBehaviour
 
     protected virtual void OnInit()
     {
-        CurrAnimName = "idle";
+        CurrAnimName = "Idle";
     }
     protected virtual void OnDespawn()
     {
@@ -45,16 +45,16 @@ public class Character : MonoBehaviour
             }
         }
     }
-    //protected void ChangeAnim(string AnimName)
-    //{
-    //    Debug.Log(AnimName);
-    //    if (CurrAnimName != AnimName)
-    //    {
-    //        anim.ResetTrigger(CurrAnimName);
-    //        CurrAnimName = AnimName;
-    //        anim.SetTrigger(CurrAnimName);
-    //    }
-    //}
+    protected void ChangeAnim(string AnimName)
+    {
+        Debug.Log(AnimName);
+        if (CurrAnimName != AnimName)
+        {
+            anim.ResetTrigger(CurrAnimName);
+            CurrAnimName = AnimName;
+            anim.SetTrigger(CurrAnimName);
+        }
+    }
     public void Dead()
     {
         Destroy(gameObject);

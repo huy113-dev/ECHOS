@@ -1,22 +1,31 @@
 fileFormatVersion: 2
-guid: 29ee3746ae86f5f44a9c5ca3350df176
+guid: 04a96c0199a83e6468d5c7e3e97802ae
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5727632500205192571
-    second: idle-removebg-preview_0
+      213: 837532097811466736
+    second: climb ladder_0
   - first:
-      213: 5984175762668610883
-    second: idle-removebg-preview_1
+      213: -251595567019866907
+    second: climb ladder_1
   - first:
-      213: 4907928240174991729
-    second: idle-removebg-preview_2
+      213: 8992327413273068055
+    second: climb ladder_2
   - first:
-      213: -8596501466329010667
-    second: idle-removebg-preview_3
+      213: -7633780571208390755
+    second: climb ladder_3
   - first:
-      213: 7563922141400941713
-    second: idle-removebg-preview_4
+      213: 6473157103146534803
+    second: climb ladder_4
+  - first:
+      213: -8531989694426085720
+    second: climb ladder_5
+  - first:
+      213: -7430803973410873029
+    second: climb ladder_6
+  - first:
+      213: -5676706742997628694
+    second: climb ladder_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -112,13 +121,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: idle-removebg-preview_0
+      name: climb ladder_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 5
-        width: 115
-        height: 242
+        x: 4353
+        y: 534
+        width: 394
+        height: 608
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,20 +136,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 58a794d569c5380b0800000000000000
-      internalID: -5727632500205192571
+      spriteID: 0f94a0a61038f9b00800000000000000
+      internalID: 837532097811466736
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle-removebg-preview_1
+      name: climb ladder_1
       rect:
         serializedVersion: 2
-        x: 164
-        y: 6
-        width: 141
-        height: 246
+        x: 4677
+        y: 1124
+        width: 10
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3456d5f86201c0350800000000000000
-      internalID: 5984175762668610883
+      spriteID: 5e4c7b03a27228cf0800000000000000
+      internalID: -251595567019866907
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle-removebg-preview_2
+      name: climb ladder_2
       rect:
         serializedVersion: 2
-        x: 337
-        y: 6
-        width: 164
-        height: 254
+        x: 5496
+        y: 643
+        width: 436
+        height: 664
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +180,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1790dba2bb67c1440800000000000000
-      internalID: 4907928240174991729
+      spriteID: 7120624932a2bcc70800000000000000
+      internalID: 8992327413273068055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle-removebg-preview_3
+      name: climb ladder_3
       rect:
         serializedVersion: 2
-        x: 563
-        y: 6
-        width: 165
-        height: 245
+        x: 3282
+        y: 310
+        width: 390
+        height: 602
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 51ea55c667713b880800000000000000
-      internalID: -8596501466329010667
+      spriteID: d9768d7140d5f0690800000000000000
+      internalID: -7633780571208390755
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle-removebg-preview_4
+      name: climb ladder_4
       rect:
         serializedVersion: 2
-        x: 794
-        y: 5
-        width: 124
-        height: 242
+        x: 5925
+        y: 904
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,8 +224,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1944aeabc1378f860800000000000000
-      internalID: 7563922141400941713
+      spriteID: 397885cc61645d950800000000000000
+      internalID: 6473157103146534803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climb ladder_5
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 7
+        width: 373
+        height: 636
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a6807cc398489980800000000000000
+      internalID: -8531989694426085720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climb ladder_6
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 0
+        width: 351
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b31a841082b70e890800000000000000
+      internalID: -7430803973410873029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climb ladder_7
+      rect:
+        serializedVersion: 2
+        x: 2278
+        y: 254
+        width: 373
+        height: 615
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae8cf813b494831b0800000000000000
+      internalID: -5676706742997628694
       vertices: []
       indices: 
       edges: []
@@ -235,11 +310,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      idle-removebg-preview_0: -5727632500205192571
-      idle-removebg-preview_1: 5984175762668610883
-      idle-removebg-preview_2: 4907928240174991729
-      idle-removebg-preview_3: -8596501466329010667
-      idle-removebg-preview_4: 7563922141400941713
+      climb ladder_0: 837532097811466736
+      climb ladder_1: -251595567019866907
+      climb ladder_2: 8992327413273068055
+      climb ladder_3: -7633780571208390755
+      climb ladder_4: 6473157103146534803
+      climb ladder_5: -8531989694426085720
+      climb ladder_6: -7430803973410873029
+      climb ladder_7: -5676706742997628694
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

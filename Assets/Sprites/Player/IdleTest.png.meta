@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7e4e272783531564286f11d65592d046
+guid: 5874abf569653e448a52126b998bb0d9
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -20,12 +20,6 @@ TextureImporter:
   - first:
       213: -2834552850196481573
     second: Idle_5
-  - first:
-      213: 3278449094680734212
-    second: Idle_6
-  - first:
-      213: 3384493420599841878
-    second: Idle_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -69,10 +63,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 350
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,8 +120,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1024
-        height: 1024
+        width: 1920
+        height: 2226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,10 +140,10 @@ TextureImporter:
       name: Idle_1
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 1920
         y: 0
-        width: 1024
-        height: 1024
+        width: 1920
+        height: 2226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,10 +162,10 @@ TextureImporter:
       name: Idle_2
       rect:
         serializedVersion: 2
-        x: 2048
+        x: 3840
         y: 0
-        width: 1024
-        height: 1024
+        width: 1920
+        height: 2226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,10 +184,10 @@ TextureImporter:
       name: Idle_3
       rect:
         serializedVersion: 2
-        x: 3072
+        x: 5760
         y: 0
-        width: 1024
-        height: 1024
+        width: 1920
+        height: 2226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,10 +206,10 @@ TextureImporter:
       name: Idle_4
       rect:
         serializedVersion: 2
-        x: 4096
+        x: 7680
         y: 0
-        width: 1024
-        height: 1024
+        width: 1920
+        height: 2226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,10 +228,10 @@ TextureImporter:
       name: Idle_5
       rect:
         serializedVersion: 2
-        x: 5120
+        x: 9600
         y: 0
-        width: 1024
-        height: 1024
+        width: 1920
+        height: 2226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,7 +250,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f4cfbc8d3a6047c4c858d3bdd96d2537
+    spriteID: 1154e7596d67bbd41ba183ddb2660b4c
     internalID: 0
     vertices: []
     indices: 

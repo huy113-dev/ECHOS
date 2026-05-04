@@ -10,6 +10,7 @@ public class Player : Character
     private bool isFacingRight;
     private bool isDead = false;
     private Vector3 savePoint;
+    private bool isFreeze = false;
 
     [Header("Simple Move")]
     [SerializeField] private float baseSpeed;
@@ -49,17 +50,29 @@ public class Player : Character
     {
         SavePoint();
         rb = GetComponent<Rigidbody2D>();
+        CurrAnimName = "Idle";
     }
     void Update()
     {
+        if (isFreeze)
+        {
+            return;
+        }
         if (isDead)
         {
-            rb.linearVelocity = Vector2.zero;
             return;
         }
         isGrounded = CheckGrounded();
         isFacingRight = transform.right.x > 0;
         horizontal = Input.GetAxisRaw("Horizontal");
+
+        //moving
+        if (Mathf.Abs(horizontal) > 0.1f && !isRunning)
+        {
+            ChangeAnim("Walk");
+            rb.linearVelocity = new Vector2(horizontal * baseSpeed, rb.linearVelocityY);
+            transform.rotation = Quaternion.Euler(new Vector3(0, horizontal > 0 ? 0 : 180, 0));
+        }
 
         //throwing
         if (Input.GetKeyDown(KeyCode.F))
@@ -115,6 +128,10 @@ public class Player : Character
             {
                 isRunning = true;
                 speedTimer += Time.deltaTime;
+                if(stamina > 0f)
+                {
+                    ChangeAnim("Run");
+                }
 
                 Speed = RunningSpeedCurve.Evaluate(speedTimer);
                 if (speedTimer > 1f)
@@ -128,9 +145,16 @@ public class Player : Character
                 if (stamina < 0f)
                 {
                     stamina = 0f;
+                    Speed = baseSpeed;
+                    isRunning = false;
                 }
 
                 rb.linearVelocity = new Vector2(horizontal * Speed, rb.linearVelocityY);
+                if (Mathf.Abs(horizontal) > 0.1f)
+                {
+                    transform.rotation = Quaternion.Euler(new Vector3(0, horizontal > 0 ? 0 : 180, 0));
+                    isFacingRight = transform.right.x > 0;
+                }
 
                 if (recharge != null)
                 {
@@ -138,20 +162,21 @@ public class Player : Character
                 }
                 recharge = StartCoroutine(StaminaRecharge());
             }
-            if (Input.GetKeyUp(KeyCode.LeftShift))
+            if (Mathf.Abs(horizontal) < 0.1f && !isJumping)
             {
-                isRunning = false;
-                speedTimer = 0f;
-                Speed = baseSpeed;
+                ChangeAnim("Idle");
+                rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
             }
+
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            isRunning = false;
+            speedTimer = 0f;
+            Speed = baseSpeed;
         }
 
-        //moving
-        if (Mathf.Abs(horizontal) > 0.1f && !isRunning)
-        {
-            rb.linearVelocity = new Vector2(horizontal * baseSpeed, rb.linearVelocityY);
-            transform.rotation = Quaternion.Euler(new Vector3(0, horizontal > 0 ? 0 : 180, 0));
-        }
+
 
 
     }
@@ -163,7 +188,11 @@ public class Player : Character
         isDead = false;
         transform.position = savePoint;
         //ChangeAnim("idle");
-        rb.linearVelocity = Vector2.zero;
+    }
+
+    public void Freeze()
+    {
+        isFreeze = true;
     }
     private void SavePoint()
     {
@@ -171,13 +200,27 @@ public class Player : Character
     }
     private bool CheckGrounded()
     {
-        Vector2 rayStartPosL = transform.position + new Vector3(0.3f, 1f, 0);
-        Vector2 rayStartPosR = transform.position + new Vector3(-0.3f, 1f, 0);
-        Debug.DrawLine(rayStartPosL, rayStartPosL + Vector2.down * 2.2f, Color.red);
-        Debug.DrawLine(rayStartPosR, rayStartPosR + Vector2.down * 2.2f, Color.red);
-        RaycastHit2D hitL = Physics2D.Raycast(rayStartPosL, Vector2.down, 2.2f, groundLayer);
-        RaycastHit2D hitR = Physics2D.Raycast(rayStartPosR, Vector2.down, 2.2f, groundLayer);
-        return hitL.collider != null || hitR.collider != null;
+        if (isFacingRight)
+        {
+            Vector2 rayStartPosR = transform.position + new Vector3(0.6f, 0, 0);
+            Vector2 rayStartPosL = transform.position + new Vector3(0, 0, 0);
+            Debug.DrawLine(rayStartPosL, rayStartPosL + Vector2.down * 1.23f, Color.red);
+            Debug.DrawLine(rayStartPosR, rayStartPosR + Vector2.down * 1.23f, Color.red);
+            RaycastHit2D hitL = Physics2D.Raycast(rayStartPosL, Vector2.down, 1.23f, groundLayer);
+            RaycastHit2D hitR = Physics2D.Raycast(rayStartPosR, Vector2.down, 1.23f, groundLayer);
+            return hitL.collider != null || hitR.collider != null;
+        }
+        else
+        {
+            Vector2 rayStartPosR = transform.position + new Vector3(0f, 0, 0);
+            Vector2 rayStartPosL = transform.position + new Vector3(-0.6f, 0, 0);
+            Debug.DrawLine(rayStartPosL, rayStartPosL + Vector2.down * 1.23f, Color.red);
+            Debug.DrawLine(rayStartPosR, rayStartPosR + Vector2.down * 1.23f, Color.red);
+            RaycastHit2D hitL = Physics2D.Raycast(rayStartPosL, Vector2.down, 1.23f, groundLayer);
+            RaycastHit2D hitR = Physics2D.Raycast(rayStartPosR, Vector2.down, 1.23f, groundLayer);
+            return hitL.collider != null || hitR.collider != null;
+        }
+
     }
 
     private void StartJumping()
@@ -259,7 +302,7 @@ public class Player : Character
             //ChangeAnim("die");
             isDead = true;
             
-            Invoke(nameof(OnInit), 2f);
+            Invoke(nameof(OnInit), 1f);
         }
     }
 }
