@@ -1,6 +1,5 @@
 using System.Collections;
 using Unity.VisualScripting;
-using UnityEditorInternal.VR;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -80,9 +79,12 @@ public class Player : Character
         isFacingRight = transform.right.x > 0;
         horizontal = Input.GetAxisRaw("Horizontal");
         CheckForLedge();
-
+        if (canClimb)
+        {
+            return;
+        }
         //moving
-        if (Mathf.Abs(horizontal) > 0.1f && !isRunning && !isJumping)
+        if (Mathf.Abs(horizontal) > 0.1f && !isRunning && !isJumping && !isthrowing)
         {
             ChangeAnim("Walk");
             rb.linearVelocity = new Vector2(horizontal * baseSpeed, rb.linearVelocityY);
@@ -100,6 +102,13 @@ public class Player : Character
         }
         if (isthrowing)
         {
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+
+            if (IsInvoking(nameof(ShootDelay)))
+            {
+                return;
+            }
+            ChangeAnim("Throw");
 
             if (Mathf.Abs(horizontal) > 0.1f)
             {
@@ -114,8 +123,9 @@ public class Player : Character
 
             if (Input.GetKey(KeyCode.J))
             {
-                Shoot(velocity);
-                isthrowing = false;
+                ChangeAnim("Throwing");
+                Invoke(nameof(ShootDelay), 0.5f);
+                
             }
             return;
         }
@@ -337,6 +347,12 @@ public class Player : Character
         GameObject stone = Instantiate(stonePrefab, throwPoint.position, Quaternion.identity);
         Rigidbody2D rb = stone.GetComponent<Rigidbody2D>();
         rb.linearVelocity = velocity;
+    }
+
+    private void ShootDelay()
+    {
+        Shoot(velocity);
+        isthrowing = false;
     }
     private void updateAngle()
     {
