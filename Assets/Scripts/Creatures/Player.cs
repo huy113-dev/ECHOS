@@ -72,6 +72,7 @@ public class Player : Character
         }
         if (isDead)
         {
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
             return;
         }
         isGrounded = CheckGrounded();
@@ -196,7 +197,7 @@ public class Player : Character
                 }
 
             }
-            if (Input.GetKeyUp(KeyCode.LeftControl) || !isGrounded || isJumping)
+            if (Input.GetKeyUp(KeyCode.LeftControl) || !isGrounded || isJumping || !HeadBlocked)
             {
                 isCrouching = false;
             }
@@ -242,7 +243,7 @@ public class Player : Character
     {
         if (isFacingRight)
         {
-            Vector2 rayStartPosR = transform.position + new Vector3(0.6f, 0, 0);
+            Vector2 rayStartPosR = transform.position + new Vector3(0.5f, 0, 0);
             Vector2 rayStartPosL = transform.position + new Vector3(0, 0, 0);
             Debug.DrawLine(rayStartPosL, rayStartPosL + Vector2.down * 1.23f, Color.red);
             Debug.DrawLine(rayStartPosR, rayStartPosR + Vector2.down * 1.23f, Color.red);
@@ -290,6 +291,9 @@ public class Player : Character
             climbStartPos = ledgePosition + offset1;
             climbOverPos = ledgePosition + offset2;
             canClimb = true;
+
+            rb.linearVelocity = Vector2.zero;
+            rb.gravityScale = 0f;
         }
         if (canClimb)
         {
@@ -300,8 +304,14 @@ public class Player : Character
 
     private void LedgeClimbOver()
     {
+        rb.gravityScale = 5f;
         canClimb = false;
         transform.position = climbOverPos;
+        Invoke(nameof(grapDelay), 1f);
+    }
+
+    private void grapDelay()
+    {
         canGrabLedge = true;
     }
 
@@ -372,9 +382,8 @@ public class Player : Character
     {
         if (collision.tag == "Trap")
         {
-            //ChangeAnim("die");
+            ChangeAnim("Die");
             isDead = true;
-            
             Invoke(nameof(OnInit), 1f);
         }
     }

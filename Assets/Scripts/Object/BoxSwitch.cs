@@ -9,7 +9,7 @@ public class BoxSwitch : MonoBehaviour
     {
         if(collision.tag == "Stone")
         {
-            Debug.Log("hit!");
+            gameObject.SetActive(false);
             box.BoxFall();
         }
     }
