@@ -1,36 +1,62 @@
-﻿using UnityEngine;
+using System.Xml.Serialization;
+using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    // Thêm biến để điều khiển component Animator
-    protected Animator anim;
+    [SerializeField] protected Animator anim;
+    [SerializeField] protected float hp;
     protected string CurrAnimName;
-
-    // Unity sẽ tự động chạy Awake() khi game bắt đầu
-    protected virtual void Awake()
+    protected bool invicible;
+    public bool IsDead => hp <= 0f;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
     {
-        // Tự động tìm và lấy bộ điều khiển hoạt ảnh (Animator) trên nhân vật
-        anim = GetComponent<Animator>();
+        OnInit();
     }
 
     protected virtual void OnInit()
     {
-        // Logic khởi tạo chung cho mọi nhân vật
+        CurrAnimName = "Idle";
+    }
+    protected virtual void OnDespawn()
+    {
+        ChangeAnim("Die");
+        Invoke(nameof(Dead), 2f);
+
     }
 
-    // Hàm đổi animation đã được nâng cấp
-    protected void ChangeAnim(string animName)
+    public virtual void OnHit(float damage)
     {
-        // Nếu animation muốn đổi khác với animation hiện tại thì mới chạy (tránh bị kẹt frame)
-        if (CurrAnimName != animName)
+        if (invicible)
         {
-            CurrAnimName = animName;
+            return;
+        }
 
-            // Dòng lệnh CỐT LÕI giúp animation của bạn xuất hiện trở lại!
-            if (anim != null)
+        else
+        {
+            if (!IsDead)
             {
-                anim.Play(CurrAnimName);
+                hp -= damage;
+                if (IsDead)
+                {
+                    OnDespawn();
+                }
             }
         }
     }
+    protected void ChangeAnim(string AnimName)
+    {
+        Debug.Log(AnimName);
+        if (CurrAnimName != AnimName)
+        {
+            anim.ResetTrigger(CurrAnimName);
+            CurrAnimName = AnimName;
+            anim.SetTrigger(CurrAnimName);
+        }
+    }
+    public void Dead()
+    {
+        Destroy(gameObject);
+    }
+
 }
