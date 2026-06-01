@@ -258,7 +258,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player 1
+  m_Name: Player 2
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Walk
@@ -711,19 +711,19 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 586326411319970864}
-    m_Position: {x: 100, y: 70, z: 0}
+    m_Position: {x: 100, y: 280, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8341150022200849816}
     m_Position: {x: 470, y: 190, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7416775751538956603}
-    m_Position: {x: 470, y: 320, z: 0}
+    m_Position: {x: 460, y: 320, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7154338238063076510}
-    m_Position: {x: 480, y: 400, z: 0}
+    m_Position: {x: 470, y: 400, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7752610173656842620}
-    m_Position: {x: 480, y: 480, z: 0}
+    m_Position: {x: 480, y: 490, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5685869704368380773}
     m_Position: {x: 480, y: 560, z: 0}
@@ -738,10 +738,10 @@ AnimatorStateMachine:
     m_Position: {x: 80, y: 680, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2892413921719580988}
-    m_Position: {x: 740, y: 480, z: 0}
+    m_Position: {x: 760, y: 450, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -495226097437773943}
-    m_Position: {x: 500, y: 820, z: 0}
+    m_Position: {x: 340, y: 770, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8466443226412768233}
     m_Position: {x: 730, y: 400, z: 0}
@@ -761,7 +761,7 @@ AnimatorStateMachine:
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 90, y: 430, z: 0}
-  m_EntryPosition: {x: 120, y: -50, z: 0}
+  m_EntryPosition: {x: 200, y: 200, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 586326411319970864}
