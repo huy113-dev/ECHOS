@@ -1,0 +1,774 @@
+fileFormatVersion: 2
+guid: 3a9cb785db9bb2444bafcd776b162b0c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4572684927687805838
+    second: monster-01-removebg-preview_0
+  - first:
+      213: -4122603729144929929
+    second: monster-01-removebg-preview_1
+  - first:
+      213: 5023602850917144251
+    second: monster-01-removebg-preview_2
+  - first:
+      213: -8739516462785412444
+    second: monster-01-removebg-preview_3
+  - first:
+      213: 2026048112219918771
+    second: monster-01-removebg-preview_4
+  - first:
+      213: 6980783799137451
+    second: monster-01-removebg-preview_5
+  - first:
+      213: 4212559511584685969
+    second: monster-01-removebg-preview_6
+  - first:
+      213: 9118842559677742458
+    second: monster-01-removebg-preview_7
+  - first:
+      213: -3739183043530378740
+    second: monster-01-removebg-preview_8
+  - first:
+      213: -6380236427801805644
+    second: monster-01-removebg-preview_9
+  - first:
+      213: -461070720566055995
+    second: monster-01-removebg-preview_10
+  - first:
+      213: -139024559969544664
+    second: monster-01-removebg-preview_11
+  - first:
+      213: -6836968456967219525
+    second: monster-01-removebg-preview_12
+  - first:
+      213: 6991025890712368596
+    second: monster-01-removebg-preview_13
+  - first:
+      213: 5107692504605501291
+    second: monster-01-removebg-preview_14
+  - first:
+      213: -6564785802648039349
+    second: monster-01-removebg-preview_15
+  - first:
+      213: -5145725403013623980
+    second: monster-01-removebg-preview_16
+  - first:
+      213: -951326008635058561
+    second: monster-01-removebg-preview_17
+  - first:
+      213: 2643160560741186918
+    second: monster-01-removebg-preview_18
+  - first:
+      213: 669915003966228889
+    second: monster-01-removebg-preview_19
+  - first:
+      213: 6585270822121367130
+    second: monster-01-removebg-preview_20
+  - first:
+      213: 2065758606061428105
+    second: monster-01-removebg-preview_21
+  - first:
+      213: 4371277330433182023
+    second: monster-01-removebg-preview_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: monster-01-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 507
+        width: 49
+        height: 54
+      alignment: 9
+      pivot: {x: 0.75477463, y: 0.46873114}
+      border: {x: 1, y: 0, z: 1, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 274b26f094f8a80c0800000000000000
+      internalID: -4572684927687805838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-01-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 507
+        width: 48
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 771ad9630c199c6c0800000000000000
+      internalID: -4122603729144929929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-01-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 507
+        width: 47
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb65e8d3d2c67b540800000000000000
+      internalID: 5023602850917144251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-01-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 455
+        width: 46
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a24ffeb41007b680800000000000000
+      internalID: -8739516462785412444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-01-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 454
+        width: 50
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b118ba0608fd1c10800000000000000
+      internalID: 2026048112219918771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-01-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 454
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba4f9926cfcc81000800000000000000
+      internalID: 6980783799137451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-01-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 343
+        width: 51
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19fb2338e84067a30800000000000000
+      internalID: 4212559511584685969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-01-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 344
+        width: 44
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7d3e4c8ef2ac8e70800000000000000
+      internalID: 9118842559677742458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-01-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 345
+        width: 67
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c02353c35d0cb1cc0800000000000000
+      internalID: -3739183043530378740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-01-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 344
+        width: 91
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bcbdd9d5c8d477a0800000000000000
+      internalID: -6380236427801805644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-01-removebg-preview_10
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 263
+        width: 84
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cba35c5f92f999f0800000000000000
+      internalID: -461070720566055995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-01-removebg-preview_11
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 265
+        width: 41
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 826d5f736e5121ef0800000000000000
+      internalID: -139024559969544664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-01-removebg-preview_12
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 265
+        width: 62
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb61be589653e11a0800000000000000
+      internalID: -6836968456967219525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-01-removebg-preview_13
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 262
+        width: 47
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d5387fe10d150160800000000000000
+      internalID: 6991025890712368596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-01-removebg-preview_14
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 165
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b67afee654b22e640800000000000000
+      internalID: 5107692504605501291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-01-removebg-preview_15
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 165
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b40d2ae181235e4a0800000000000000
+      internalID: -6564785802648039349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-01-removebg-preview_16
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 165
+        width: 52
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45f4ba95206b698b0800000000000000
+      internalID: -5145725403013623980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-01-removebg-preview_17
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 112
+        width: 55
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7697b519063cc2f0800000000000000
+      internalID: -951326008635058561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-01-removebg-preview_18
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 114
+        width: 54
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66dfc43a6846ea420800000000000000
+      internalID: 2643160560741186918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-01-removebg-preview_19
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 113
+        width: 56
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9998c1195240c4900800000000000000
+      internalID: 669915003966228889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-01-removebg-preview_20
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 59
+        width: 53
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a56e9462ce4936b50800000000000000
+      internalID: 6585270822121367130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-01-removebg-preview_21
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 61
+        width: 64
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98d5ff1e18c0bac10800000000000000
+      internalID: 2065758606061428105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-01-removebg-preview_22
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 60
+        width: 52
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 749003f6295e9ac30800000000000000
+      internalID: 4371277330433182023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-01-removebg-preview_23
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 507
+        width: 45
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46e830be6672c1f44abcfa27182a490d
+      internalID: 966617367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-01-removebg-preview_24
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 507
+        width: 51
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95f5812083181114fa827cfe8ffb9050
+      internalID: -1939164602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5487c90c70b4e1f488ab9960365c3f46
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      monster-01-removebg-preview_0: -4572684927687805838
+      monster-01-removebg-preview_1: -4122603729144929929
+      monster-01-removebg-preview_10: -461070720566055995
+      monster-01-removebg-preview_11: -139024559969544664
+      monster-01-removebg-preview_12: -6836968456967219525
+      monster-01-removebg-preview_13: 6991025890712368596
+      monster-01-removebg-preview_14: 5107692504605501291
+      monster-01-removebg-preview_15: -6564785802648039349
+      monster-01-removebg-preview_16: -5145725403013623980
+      monster-01-removebg-preview_17: -951326008635058561
+      monster-01-removebg-preview_18: 2643160560741186918
+      monster-01-removebg-preview_19: 669915003966228889
+      monster-01-removebg-preview_2: 5023602850917144251
+      monster-01-removebg-preview_20: 6585270822121367130
+      monster-01-removebg-preview_21: 2065758606061428105
+      monster-01-removebg-preview_22: 4371277330433182023
+      monster-01-removebg-preview_23: 966617367
+      monster-01-removebg-preview_24: -1939164602
+      monster-01-removebg-preview_3: -8739516462785412444
+      monster-01-removebg-preview_4: 2026048112219918771
+      monster-01-removebg-preview_5: 6980783799137451
+      monster-01-removebg-preview_6: 4212559511584685969
+      monster-01-removebg-preview_7: 9118842559677742458
+      monster-01-removebg-preview_8: -3739183043530378740
+      monster-01-removebg-preview_9: -6380236427801805644
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
