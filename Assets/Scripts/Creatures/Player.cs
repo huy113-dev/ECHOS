@@ -51,6 +51,11 @@ public class Player : Character
     [SerializeField] private Vector2 offset1;
     [SerializeField] private Vector2 offset2;
 
+    [Header("Hiding")]
+    public bool isHiding = false;
+    [HideInInspector] public bool canHide = false;
+     
+
     private Vector2 climbStartPos;
     private Vector2 climbOverPos;
 
@@ -84,15 +89,18 @@ public class Player : Character
             return;
         }
         //moving
-        if (Mathf.Abs(horizontal) > 0.1f && !isRunning && !isJumping && !isthrowing)
+        if (Mathf.Abs(horizontal) > 0.1f && !isRunning && !isthrowing && !isHiding)
         {
-            ChangeAnim("Walk");
+            if (!isJumping && isGrounded)
+            {
+                ChangeAnim("Walk");
+            }
             rb.linearVelocity = new Vector2(horizontal * baseSpeed, rb.linearVelocityY);
             transform.rotation = Quaternion.Euler(new Vector3(0, horizontal > 0 ? 0 : 180, 0));
         }
 
         //throwing
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) && isGrounded)
         {
             isthrowing = !isthrowing;
             if (!isthrowing)
@@ -133,7 +141,7 @@ public class Player : Character
         {
             OnJumping();
         }
-        if (isGrounded)
+        if (isGrounded && !isHiding)
         {
             //jumping
             isJumping = false;
@@ -220,7 +228,7 @@ public class Player : Character
             ChangeAnim("Fall");
         }
 
-        if (Input.GetKeyUp(KeyCode.LeftShift))
+        if (Input.GetKeyUp(KeyCode.LeftShift) && !isHiding && !isJumping && !isthrowing)
         {
             isRunning = false;
             speedTimer = 0f;
@@ -298,8 +306,9 @@ public class Player : Character
         {
             canGrabLedge = false;
             Vector2 ledgePosition = GetComponentInChildren<LedgeCheck>().transform.position;
-            climbStartPos = ledgePosition + offset1;
-            climbOverPos = ledgePosition + offset2;
+            float direction = isFacingRight ? 1 : -1;
+            climbStartPos = ledgePosition + new Vector2(offset1.x * direction, offset1.y);
+            climbOverPos = ledgePosition + new Vector2(offset2.x * direction, offset2.y);
             canClimb = true;
 
             rb.linearVelocity = Vector2.zero;
@@ -382,9 +391,26 @@ public class Player : Character
         }
     }
 
+    public bool StartHiding()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public void MovePLayerTo(Vector3 position)
+    {
+        transform.position = position;
+    }
+
     public bool switchLevel()
     {
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             return true;
         }

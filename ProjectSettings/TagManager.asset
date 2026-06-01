@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Trap
   - Stone
+  - EnemyWall
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -16,9 +18,9 @@ TagManager:
   - Stone
   - Player
   - Ledge
-  - 
-  - 
-  - 
+  - Wall
+  - Sight
+  - Enemy
   - 
   - 
   - 
