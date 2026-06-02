@@ -11,6 +11,7 @@ public class Player : Character
     private bool isDead = false;
     private Vector3 savePoint;
     private bool isFreeze = false;
+    [HideInInspector] public SpriteRenderer sprite;
 
     [Header("Simple Move")]
     [SerializeField] private float baseSpeed;
@@ -43,7 +44,7 @@ public class Player : Character
     [SerializeField] private GameObject stonePrefab;
     [SerializeField] private Transform throwPoint;
     [SerializeField] private float throwForce;
-    private bool isthrowing = false;
+    [HideInInspector] public bool isthrowing = false;
     private float aimAngle;
     private Vector2 velocity;
 
@@ -54,6 +55,7 @@ public class Player : Character
     [Header("Hiding")]
     public bool isHiding = false;
     [HideInInspector] public bool canHide = false;
+    
      
 
     private Vector2 climbStartPos;
@@ -66,6 +68,7 @@ public class Player : Character
     {
         SavePoint();
         rb = GetComponent<Rigidbody2D>();
+        sprite = GetComponent<SpriteRenderer>();
         CurrAnimName = "Idle";
     }
     void Update()
@@ -419,6 +422,7 @@ public class Player : Character
             return false;
         }
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

@@ -21,7 +21,8 @@ public class Stone : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(!hasHitGround && collision.gameObject.CompareTag("Ground"))
+        if (gameObject.scene.name == "simulation") return;
+        if (!hasHitGround && collision.gameObject.CompareTag("Ground"))
         {
             hasHitGround = true;
             CreateNoise();
