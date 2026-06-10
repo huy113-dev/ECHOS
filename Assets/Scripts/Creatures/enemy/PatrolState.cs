@@ -3,11 +3,10 @@
 public class PatrolState : IState
 {
     private float timer, randomTimer;
-
     public void OnEnter(Enemy enemy)
     {
         timer = 0f;
-        randomTimer = Random.Range(5f, 7f);
+        randomTimer = Random.Range(enemy.RTimer1, enemy.RTimer2);
     }
     public void OnExecute(Enemy enemy)
     {

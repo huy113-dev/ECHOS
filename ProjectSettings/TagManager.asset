@@ -8,6 +8,8 @@ TagManager:
   - Stone
   - EnemyWall
   - Ground
+  - Enemy
+  - Bell
   layers:
   - Default
   - TransparentFX

@@ -16,7 +16,7 @@ public class DoorLeverSwitch : MonoBehaviour
         {
             ClampAnimation(anim, "DoorSpeed");
         }
-        if(canSwitch && player.switchLevel())
+        if(canSwitch && player.startInteract())
         {
             isSwitched = !isSwitched;
             if(isSwitched)

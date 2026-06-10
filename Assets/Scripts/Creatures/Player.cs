@@ -8,10 +8,13 @@ public class Player : Character
     //general
     private Rigidbody2D rb;
     private bool isFacingRight;
-    private bool isDead = false;
     private Vector3 savePoint;
     private bool isFreeze = false;
     [HideInInspector] public SpriteRenderer sprite;
+
+    [Header("Story")]
+    public bool isFirstChapter;
+    private float getUptime = 4f;
 
     [Header("Simple Move")]
     [SerializeField] private float baseSpeed;
@@ -55,6 +58,9 @@ public class Player : Character
     [Header("Hiding")]
     public bool isHiding = false;
     [HideInInspector] public bool canHide = false;
+
+    [Header("Combat")]
+    private bool isAttacked = false;
     
      
 
@@ -69,7 +75,7 @@ public class Player : Character
         SavePoint();
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
-        CurrAnimName = "Idle";
+        OnInit();
     }
     void Update()
     {
@@ -78,6 +84,11 @@ public class Player : Character
             return;
         }
         if (isDead)
+        {
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+            return;
+        }
+        if (isAttacked)
         {
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
             return;
@@ -250,6 +261,28 @@ public class Player : Character
         isDead = false;
         transform.position = savePoint;
         //ChangeAnim("idle");
+        if (isFirstChapter)
+        {
+            StartWakeUp();
+        }
+        else
+        {
+            ChangeAnim("Idle");
+        }
+    }
+
+    private void StartWakeUp()
+    {
+        isFreeze = true;
+        ChangeAnim("GetUp");
+        Invoke(nameof(EndWakeUp), getUptime);
+
+    }
+    private void EndWakeUp()
+    {
+        isFreeze = false;
+        isFirstChapter = false;
+        ChangeAnim("Idle");
     }
 
     public void Freeze()
@@ -370,13 +403,13 @@ public class Player : Character
     {
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            aimAngle += 20f * Time.deltaTime;
+            aimAngle += 43f * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            aimAngle -= 20f * Time.deltaTime;
+            aimAngle -= 43f * Time.deltaTime;
         }
-        aimAngle = Mathf.Clamp(aimAngle, -20f, 90f);
+        aimAngle = Mathf.Clamp(aimAngle, -60f, 90f);
     }
 
     private IEnumerator StaminaRecharge()
@@ -411,7 +444,7 @@ public class Player : Character
         transform.position = position;
     }
 
-    public bool switchLevel()
+    public bool startInteract()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -423,6 +456,36 @@ public class Player : Character
         }
     }
 
+    public void BeingAttacked()
+    {
+        if(isDead || isAttacked)
+        {
+            return;
+        }
+
+        isthrowing = false;
+        isRunning = false;
+        if(predictor != null)
+        {
+            predictor.hideTrajectory();
+        }
+
+        ChangeAnim("Attacked");
+
+        Invoke(nameof(EndAttacked), 0.4f);
+
+    }
+
+    private void EndAttacked()
+    {
+        if (isDead)
+        {
+            return;
+        }
+
+        isAttacked = false;
+        ChangeAnim("Idle");
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

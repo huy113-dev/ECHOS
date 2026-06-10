@@ -7,7 +7,7 @@ public class Character : MonoBehaviour
     [SerializeField] protected float hp;
     protected string CurrAnimName;
     protected bool invicible;
-    public bool IsDead => hp <= 0f;
+    public bool isDead = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,32 +18,14 @@ public class Character : MonoBehaviour
     {
         CurrAnimName = "Idle";
     }
-    protected virtual void OnDespawn()
+    public virtual void OnDespawn()
     {
         ChangeAnim("Die");
-        Invoke(nameof(Dead), 2f);
+        isDead = true;
+        Invoke(nameof(OnInit), 2f);
 
     }
 
-    public virtual void OnHit(float damage)
-    {
-        if (invicible)
-        {
-            return;
-        }
-
-        else
-        {
-            if (!IsDead)
-            {
-                hp -= damage;
-                if (IsDead)
-                {
-                    OnDespawn();
-                }
-            }
-        }
-    }
     protected void ChangeAnim(string AnimName)
     {
         Debug.Log(AnimName);

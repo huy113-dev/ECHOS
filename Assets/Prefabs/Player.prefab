@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 513162142462343312}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.04, y: 0.82, z: 0}
+  m_LocalPosition: {x: 0.09, y: 0.82, z: 0}
   m_LocalScale: {x: 0.1012, y: 0.1012, z: 0.1012}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -176,7 +176,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 6.4, y: 7.4249997}
+  m_Size: {x: 3.35, y: 5.39}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -196,6 +196,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 8742805428823914218}
   hp: 0
+  isDead: 0
+  sprite: {fileID: 0}
+  isFirstChapter: 0
   baseSpeed: 7
   jumpForce: 15
   groundLayer:
@@ -259,7 +262,7 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 7
+      value: 8
       inSlope: 9.748394
       outSlope: 9.748394
       tangentMode: 0
@@ -268,7 +271,7 @@ MonoBehaviour:
       outWeight: 0.06659201
     - serializedVersion: 3
       time: 1
-      value: 12
+      value: 13
       inSlope: -0.70074886
       outSlope: -0.70074886
       tangentMode: 0
@@ -278,17 +281,20 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  MaxStamina: 15
+  MaxStamina: 50
   StaminaCost: 0.1
   rechargeRate: 1.5
   StaminaBar: {fileID: 0}
-  stamina: 15
+  stamina: 50
   predictor: {fileID: 2136920793233406398}
   stonePrefab: {fileID: 4309856718837258181, guid: 2b1db3203ac656c41bec0aa724ee727f, type: 3}
   throwPoint: {fileID: 2607498164886839068}
   throwForce: 20
+  isthrowing: 0
   offset1: {x: -0.93, y: -0.8}
   offset2: {x: 0.1, y: 1.15}
+  isHiding: 0
+  canHide: 0
   ledgeDetected: 0
 --- !u!50 &1442236887354060321
 Rigidbody2D:
@@ -332,7 +338,7 @@ MonoBehaviour:
   ParentScene: {fileID: 0}
   Stone: {fileID: 4309856718837258181, guid: 2b1db3203ac656c41bec0aa724ee727f, type: 3}
   lineRenderer: {fileID: 3714856029165532310}
-  frameStep: 40
+  frameStep: 10
 --- !u!120 &3714856029165532310
 LineRenderer:
   serializedVersion: 2
@@ -357,7 +363,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 86209010ccc64274b9bd0230cf47e35c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -431,7 +437,7 @@ LineRenderer:
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
-    textureMode: 0
+    textureMode: 1
     textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0

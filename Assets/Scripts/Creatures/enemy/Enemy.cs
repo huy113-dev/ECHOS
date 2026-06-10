@@ -10,8 +10,10 @@ public class Enemy : Character
     [SerializeField] private float attackRange;
     public IState currentState;
     public Vector3 investigateTarget;
-
+    public float RTimer1;
+    public float RTimer2;
     private Character target;
+    private float lastTurnTime = 0f;
     public Character Target => target;
     public bool isRight = true;
     // Update is called once per frame
@@ -21,7 +23,7 @@ public class Enemy : Character
         {
             currentState.OnExecute(this);
         }
-        if (IsDead)
+        if (isDead)
         {
             return;
         }
@@ -37,7 +39,7 @@ public class Enemy : Character
         //CurrAnimName = "idle";
         ChangeState(new IdleState());
     }
-    protected override void OnDespawn()
+    public override void OnDespawn()
     {
         ChangeState(null);
         base.OnDespawn();
@@ -63,7 +65,25 @@ public class Enemy : Character
         }
         else if (collision.tag == "EnemyWall")
         {
-            EnemyRotation(!isRight);
+            if (currentState is InvestigateState || Target != null)
+            {
+                target = null;
+                StopMoving();
+
+                EnemyRotation(!isRight);
+                lastTurnTime = Time.time;
+
+
+                ChangeState(new IdleState());
+
+                return;
+            }
+
+            if (Time.time - lastTurnTime > 0.2f)
+            {
+                EnemyRotation(!isRight);
+                lastTurnTime = Time.time;
+            }
         }
     }
 
@@ -98,14 +118,14 @@ public class Enemy : Character
     public void Moving()
     {
         ChangeAnim("walk");
-        rb.linearVelocity = transform.right * walkSpeed;
+        rb.linearVelocity = new Vector2(transform.right.x * walkSpeed, rb.linearVelocity.y);
 
     }
 
     public void Chasing()
     {
         ChangeAnim("run");
-        rb.linearVelocity = transform.right * runSpeed;
+        rb.linearVelocity = new Vector2(transform.right.x * runSpeed, rb.linearVelocity.y);
     }
     public void StopMoving()
     {

@@ -9,7 +9,7 @@ public class TriggerNextScene : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-            Debug.Log("hitttttttt");
+            
             levelLoader.LoadNextLevel();
         }
     }

@@ -11,7 +11,7 @@ public class BoxLevelSwitch : MonoBehaviour
         if(collision.tag == "Player")
         {
             Debug.Log("hit player");
-            if (player.switchLevel())
+            if (player.startInteract())
             {
                 box.BoxFall();
             }

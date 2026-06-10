@@ -7,6 +7,7 @@ public class Stone : MonoBehaviour
     public LayerMask Enemy;
 
     private bool hasHitGround = false;
+    private bool hasHitBell = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -27,6 +28,12 @@ public class Stone : MonoBehaviour
             hasHitGround = true;
             CreateNoise();
             gameObject.SetActive(false);
+        }
+        else if(!hasHitBell && collision.gameObject.CompareTag("Bell"))
+        {
+            hasHitBell= true;
+            gameObject.SetActive(false);
+
         }
     }
 
