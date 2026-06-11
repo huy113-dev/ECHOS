@@ -1,6 +1,7 @@
-﻿using UnityEditor.Experimental.GraphView;
+﻿#if UNITY_EDITOR
+using UnityEditor.Experimental.GraphView;
+#endif
 using UnityEngine;
-
 public class Enemy : Character
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
