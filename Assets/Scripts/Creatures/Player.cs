@@ -248,7 +248,11 @@ public class Player : Character
             speedTimer = 0f;
             Speed = baseSpeed;
         }
-
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            Debug.Log("K pressed");
+            GameManager.Instance.ShowGameOver();
+        }
 
 
 
@@ -493,7 +497,12 @@ public class Player : Character
         {
             ChangeAnim("Die");
             isDead = true;
-            Invoke(nameof(OnInit), 1f);
+
+            Invoke(nameof(ShowDiePanel), 1f);
         }
+    }
+    private void ShowDiePanel()
+    {
+        FindFirstObjectByType<GameManager>().ShowGameOver();
     }
 }

@@ -22,8 +22,17 @@ public class Character : MonoBehaviour
     {
         ChangeAnim("Die");
         isDead = true;
-        Invoke(nameof(OnInit), 2f);
 
+        GameManager gm = FindFirstObjectByType<GameManager>();
+
+        if (gm != null)
+        {
+            Invoke(nameof(ShowGameOver), 1f);
+        }
+    }
+    private void ShowGameOver()
+    {
+        FindFirstObjectByType<GameManager>().ShowGameOver();
     }
 
     protected void ChangeAnim(string AnimName)
